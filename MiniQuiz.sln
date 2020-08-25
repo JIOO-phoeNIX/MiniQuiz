@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniQuiz.DataAccess", "MiniQuiz.DataAccess\MiniQuiz.DataAccess.csproj", "{7B6C6ABB-703A-4A37-B2CE-76E9215EFC75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniQuiz", "MiniQuiz\MiniQuiz.csproj", "{CE46199D-EC11-4FA0-A515-BC4D1F4ADB2B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B6C6ABB-703A-4A37-B2CE-76E9215EFC75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B6C6ABB-703A-4A37-B2CE-76E9215EFC75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B6C6ABB-703A-4A37-B2CE-76E9215EFC75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B6C6ABB-703A-4A37-B2CE-76E9215EFC75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE46199D-EC11-4FA0-A515-BC4D1F4ADB2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE46199D-EC11-4FA0-A515-BC4D1F4ADB2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE46199D-EC11-4FA0-A515-BC4D1F4ADB2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE46199D-EC11-4FA0-A515-BC4D1F4ADB2B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {898A9FB6-A213-45BC-84D1-538D7DA4A0B5}
+	EndGlobalSection
+EndGlobal

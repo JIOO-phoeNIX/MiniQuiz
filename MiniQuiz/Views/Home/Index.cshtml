@@ -1,0 +1,22 @@
+﻿@model HomeIndexViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <br />
+
+    <form asp-action="Index" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label class="control-label" asp-for="@Model.Email"></label>
+
+            <input class="form-control" asp-for="@Model.Email" />
+            <span asp-validation-for="@Model.Email" class="text-danger"></span>
+        </div>
+        <br />
+
+        <input type="submit" value="Submit" class="btn btn-primary" />
+    </form>
+</div>

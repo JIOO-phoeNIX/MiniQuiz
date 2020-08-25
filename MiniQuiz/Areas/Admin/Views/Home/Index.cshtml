@@ -1,0 +1,50 @@
+﻿@model HomeIndexViewModel
+
+@{
+    ViewData["Title"] = "Admin Index";
+}
+
+<h1>Index</h1>
+<br />
+
+@if (Model.AllQuestions.Count < 10)
+{
+    <h4><a asp-action="Create" asp-controller="Home">Create A Question</a></h4>
+}
+
+<br />
+
+@{
+    string warning = "";
+    if (Model.AllQuestions.Count == 10)
+        warning = "Maximum number of questions reached, delete or edit a question to create a new one, thanks";
+}
+<h5>Total questions: @Model.AllQuestions.Count<br /> <span style="color:red">@warning</span></h5>
+
+<div class="row">
+    <div class="col-md-12">
+        <table callpadding="0" callspacing="0" class="table table-bordered">
+            <thead>
+                <tr>
+                    <td>Text</td>
+                    <td>Action</td>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var question in Model.AllQuestions)
+                {
+                    <tr>
+                        <td>@question.QuestionText</td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@question.QuestionId" class="btn btn-outline-primary">Edit</a>
+                            <form asp-action="Delete" method="post" asp-route-id="@question.QuestionId">
+                                <input type="submit" value="Delete" class="btn btn-outline-danger" onclick="return confirm('Are you sure you want to delete the Question?');" />
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

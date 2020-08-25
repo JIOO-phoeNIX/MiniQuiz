@@ -1,0 +1,27 @@
+﻿@model HomeResultViewModel
+
+@{
+    ViewData["Title"] = "Result";
+}
+
+<div>
+    <h1>Result</h1>
+
+    <h4>Well done @Model.Email, your result is given below</h4>
+    <br />
+
+    <h5>You got @Model.TotalCorrect question(s) right out of @Model.Results.Count question(s)</h5>
+    <br />
+
+    <div>
+        @foreach (var result in Model.Results)
+        {
+            <p style="font-weight:bold; font-size:large">
+                Question @result.Id: @result.QuestionText
+            </p>
+            <p>Correct option: @result.CorrectOption</p>
+            <p>Chosen Option: @result.ChosenOption</p>
+            <br />
+        }
+    </div>
+</div>

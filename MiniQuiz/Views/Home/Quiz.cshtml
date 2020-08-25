@@ -1,0 +1,33 @@
+﻿@model HomeQuizViewModel
+
+@{
+    ViewData["Title"] = "Quiz";
+}
+
+<h1>Quiz</h1>
+<br />
+
+<h4>Question @ViewBag.QuestionNumber</h4>
+<br />
+
+<div class="row">
+    <form asp-action="Quiz" method="post">
+        Question:
+        <p style="font-weight:bold; font-size:large">
+            @Model.Question.QuestionText
+        </p>
+
+        <div class="form-group">
+            <label asp-for="@Model.ChosenOption" class="control-label"></label><br />
+            @foreach (var option in Model.Options)
+            {
+                <input type="radio" asp-for="@Model.ChosenOption" value="@option.Id" /> @option.OptionText<br />
+            }
+            <span asp-validation-for="@Model.ChosenOption" class="text-danger"></span>
+        </div>
+        <input hidden="hidden" asp-for="@Model.QuestionId" />
+
+        <br />
+        <input type="submit" value="Submit" class="btn btn-outline-primary" />
+    </form>
+</div>
